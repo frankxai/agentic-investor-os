@@ -52,6 +52,8 @@ thesis -> opportunity intake -> diligence queue -> memo -> risk register -> deci
 | [registry/investor-os.json](./registry/investor-os.json) | Machine-readable module registry. |
 | [templates](./templates) | Diligence memo, risk register, and support-plan templates. |
 | [examples](./examples) | Public-safe example intake. |
+| [Investor OS Playbook](./docs/INVESTOR_OS_PLAYBOOK.md) | Operating playbook for thesis, intake, evidence, memo, risk, update, and support lanes. |
+| [README Quality Notes](./docs/README_QUALITY_NOTES.md) | Public-safe documentation and claim-quality rules for this module. |
 
 ## Standard Alignment
 
@@ -77,6 +79,18 @@ Start a risk register:
 
 ```bash
 cp templates/risk-register.md docs/work-in-progress-risk-register.md
+```
+
+Start a diligence sprint:
+
+```bash
+cp templates/diligence-sprint-plan.md docs/work-in-progress-sprint-plan.md
+```
+
+Draft an investor update:
+
+```bash
+cp templates/investor-update.md docs/work-in-progress-update.md
 ```
 
 ## Safety

@@ -22,7 +22,8 @@
     "opportunity-intake",
     "diligence-sprint",
     "portfolio-support",
-    "investor-update"
+    "investor-update",
+    "readme-quality-review"
   ],
   "loops": [
     "thesis-loop",
@@ -42,6 +43,9 @@
     "outreach"
   ],
   "proofArtifacts": [
-    "docs/SAMPLE_DILIGENCE_MEMO.md"
+    "docs/SAMPLE_DILIGENCE_MEMO.md",
+    "docs/INVESTOR_OS_PLAYBOOK.md",
+    "templates/diligence-sprint-plan.md",
+    "templates/investor-update.md"
   ]
 }

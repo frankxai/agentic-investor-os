@@ -18,10 +18,14 @@ REQUIRED_PATHS = [
     "docs/MODULE_CHARTER.md",
     "docs/SAMPLE_DILIGENCE_MEMO.md",
     "docs/COMMERCIAL_STRATEGY.md",
+    "docs/INVESTOR_OS_PLAYBOOK.md",
+    "docs/README_QUALITY_NOTES.md",
     "registry/investor-os.json",
     "templates/diligence-memo.md",
     "templates/risk-register.md",
     "templates/portfolio-support-plan.md",
+    "templates/diligence-sprint-plan.md",
+    "templates/investor-update.md",
     "examples/sample-opportunity-intake.json",
 ]
 
