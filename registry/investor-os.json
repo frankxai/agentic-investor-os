@@ -1,0 +1,47 @@
+{
+  "id": "investor-os",
+  "name": "Agentic Investor OS",
+  "version": "0.1.0",
+  "status": "public-starter",
+  "standard": "https://github.com/frankxai/agentic-operating-system-standard",
+  "purpose": "Organize thesis, deal flow, diligence, memos, portfolio support, and investor communications with agentic workflows and approval gates.",
+  "buyers": ["angel-investor", "founder", "micro-fund", "accelerator", "portfolio-operator"],
+  "agents": [
+    "thesis-architect",
+    "deal-intake-analyst",
+    "diligence-lead",
+    "market-analyst",
+    "product-analyst",
+    "technical-analyst",
+    "memo-editor",
+    "portfolio-support-lead",
+    "compliance-sentinel"
+  ],
+  "workflows": [
+    "thesis-to-memo",
+    "opportunity-intake",
+    "diligence-sprint",
+    "portfolio-support",
+    "investor-update"
+  ],
+  "loops": [
+    "thesis-loop",
+    "deal-flow-loop",
+    "diligence-loop",
+    "portfolio-support-loop",
+    "communication-loop",
+    "memory-loop"
+  ],
+  "approvalGates": [
+    "investment-decision",
+    "legal-review",
+    "tax-accounting-review",
+    "securities-compliance-review",
+    "confidential-data",
+    "public-communication",
+    "outreach"
+  ],
+  "proofArtifacts": [
+    "docs/SAMPLE_DILIGENCE_MEMO.md"
+  ]
+}

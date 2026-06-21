@@ -1,0 +1,17 @@
+{
+  "opportunity": "Example AI Workflow Company",
+  "category": "agentic workflow software",
+  "stage": "placeholder",
+  "source": "public-safe example",
+  "thesis": "Workflow automation may become more valuable when paired with evidence gates and human approval.",
+  "known_evidence": [],
+  "missing_evidence": [
+    "customer urgency",
+    "activation event",
+    "retention pattern",
+    "distribution channel",
+    "technical differentiation",
+    "regulated claim review"
+  ],
+  "approval_owner": "human reviewer"
+}
