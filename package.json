@@ -4,7 +4,8 @@
   "private": false,
   "description": "Agentic operating system starter for thesis, deal flow, diligence, memos, risk registers, portfolio support, and investor communications.",
   "scripts": {
-    "validate": "python scripts/validate_repo.py ."
+    "validate": "python scripts/validate_repo.py .",
+    "validate:canon": "python scripts/validate_canon.py ."
   },
   "keywords": [
     "agentic-os",

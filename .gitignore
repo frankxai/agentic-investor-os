@@ -3,3 +3,6 @@ node_modules/
 .tmp/
 dist/
 coverage/
+knowledge/_raw/
+__pycache__/
+.pytest_cache/

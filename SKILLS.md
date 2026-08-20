@@ -12,6 +12,7 @@
 | Portfolio Support | Post-decision or active portfolio help. | 30-day support plan. |
 | Investor Update | Need stakeholder communication. | Update brief. |
 | Compliance Review | Regulated claims, confidential data, public communication, or decision pressure. | Approval gate note. |
+| Canon Recall | Mechanism, protocol, or definition needed during diligence. | Cited concept card id from `knowledge/cards/`. |
 
 ## Skill Quality Bar
 
@@ -29,6 +30,7 @@ Each skill must:
 
 1. Repo instructions.
 2. Registry.
-3. Templates.
-4. Public-safe examples.
-5. Human-provided private context, only when explicitly authorized.
+3. `knowledge/` concept cards (cite `id`; no citation → fail eval).
+4. Templates.
+5. Public-safe examples.
+6. Human-provided private context, only when explicitly authorized.

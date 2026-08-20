@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://frankx.ai/schema/concept-card.v0.1.json",
+  "title": "Starlight concept card",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "type",
+    "domain",
+    "license",
+    "public_ok",
+    "hitl_status",
+    "source"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{3,80}$" },
+    "type": {
+      "type": "string",
+      "enum": ["mechanism", "definition", "protocol", "eval-fixture", "queue"]
+    },
+    "domain": {
+      "type": "string",
+      "enum": ["investor", "author", "creator"]
+    },
+    "license": {
+      "type": "string",
+      "enum": [
+        "public-domain",
+        "source-permitted-commentary",
+        "platform-docs-commentary",
+        "private-cold",
+        "pending-extraction"
+      ]
+    },
+    "public_ok": { "type": "boolean" },
+    "hitl_status": {
+      "type": "string",
+      "enum": ["pending_human_review", "accepted", "rejected"]
+    },
+    "source": {
+      "type": "object",
+      "required": ["title", "url", "retrieved"],
+      "properties": {
+        "title": { "type": "string" },
+        "url": { "type": "string" },
+        "retrieved": { "type": "string" },
+        "sha256": { "type": "string" },
+        "quote": { "type": "string" }
+      }
+    }
+  }
+}

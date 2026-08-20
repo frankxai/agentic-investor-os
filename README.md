@@ -54,6 +54,7 @@ thesis -> opportunity intake -> diligence queue -> memo -> risk register -> deci
 | [examples](./examples) | Public-safe example intake. |
 | [Investor OS Playbook](./docs/INVESTOR_OS_PLAYBOOK.md) | Operating playbook for thesis, intake, evidence, memo, risk, update, and support lanes. |
 | [README Quality Notes](./docs/README_QUALITY_NOTES.md) | Public-safe documentation and claim-quality rules for this module. |
+| [Knowledge canon](./knowledge/README.md) | Public-safe concept cards (Buffett letter, Bitcoin paper, Uniswap v2). HITL pending. |
 
 ## Standard Alignment
 
@@ -67,6 +68,8 @@ Validate:
 
 ```bash
 npm run validate
+python scripts/validate_canon.py
+python scripts/dcf_educational.py --self-test
 ```
 
 Start a memo:
