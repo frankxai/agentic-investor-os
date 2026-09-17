@@ -43,3 +43,31 @@
 3. Remove confidential or unapproved details.
 4. Draft update.
 5. Human approves before sending.
+
+## Accelerator: Application To IC
+
+1. Capture consent and assign an isolated tenant.
+2. Normalize intake without converting assertions into facts.
+3. Map explicit thesis fit and disqualifiers.
+4. Run market, product, and technical evidence lanes.
+5. Build coverage report, risks, and IC packet draft.
+6. Run independent verification and governance checks.
+7. Hand the IC-ready packet to a named human.
+
+## Accelerator: Accepted To Day-0
+
+1. Verify the human acceptance receipt.
+2. Create the company tenant manifest and private workspace.
+3. Select the smallest relevant operating-system modules.
+4. Create a 30-day backlog around the highest-evidence constraint.
+5. Verify isolation, permissions, rollback, and cost boundaries.
+6. Obtain activation approval before invitations, imports, or external execution.
+
+## Accelerator: Weekly Company Loop
+
+1. Capture facts and milestone evidence.
+2. Identify one current constraint.
+3. Route one bounded support lane.
+4. Execute internal reversible work.
+5. Verify independently.
+6. Record founder correction, cost, result, and next proof event.

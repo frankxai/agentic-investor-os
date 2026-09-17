@@ -35,3 +35,21 @@ state -> audience -> update draft -> confidentiality gate -> approval -> send
 ```text
 memo -> decision -> outcome -> learning -> thesis refinement
 ```
+
+## Accelerator Loop
+
+```text
+application -> evidence -> human decision -> Day-0 OS -> support -> proof -> program learning
+```
+
+## Assurance Loop
+
+```text
+maker artifact -> independent verifier -> governance gate -> human gate when required -> advance or block
+```
+
+## Tenant Learning Loop
+
+```text
+company-private result -> approved summary -> anonymization review -> cohort learning candidate -> human-approved benchmark
+```

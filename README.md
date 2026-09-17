@@ -10,6 +10,19 @@ Agentic Investor OS helps investors, founders, angels, accelerators, and portfol
 
 It is a workflow and research-organization system. Investment, legal, tax, accounting, and regulated decisions require qualified human review.
 
+## Accelerator OS
+
+The [`accelerator/`](./accelerator) pack turns the starter into an executable operating model for accelerator and venture-studio programs:
+
+- five permission-bound runtime profiles;
+- event-activated selection, company-launch, portfolio, and assurance swarms;
+- installable skill contracts;
+- task, evidence, tenant, and named-human approval schemas;
+- a fail-closed application state machine;
+- a dependency-free local control-plane CLI.
+
+Profiles are security boundaries, not one persona per job. Every institution has an isolated deployment, every company has a tenant namespace/private workspace, and shared benchmarks accept only approved anonymized aggregates.
+
 ## First-Win Workflow
 
 ```text
@@ -54,6 +67,8 @@ thesis -> opportunity intake -> diligence queue -> memo -> risk register -> deci
 | [examples](./examples) | Public-safe example intake. |
 | [Investor OS Playbook](./docs/INVESTOR_OS_PLAYBOOK.md) | Operating playbook for thesis, intake, evidence, memo, risk, update, and support lanes. |
 | [README Quality Notes](./docs/README_QUALITY_NOTES.md) | Public-safe documentation and claim-quality rules for this module. |
+| [Accelerator OS](./accelerator/README.md) | Runtime profiles, swarms, autonomy ladder, tools, tenancy, workflows, and pilot design. |
+| [Accelerator OS Runbook](./accelerator/RUNBOOK.md) | Daily, weekly, selection, Day-0, portfolio, and escalation procedures. |
 
 ## Standard Alignment
 
@@ -67,6 +82,13 @@ Validate:
 
 ```bash
 npm run validate
+```
+
+Try the public-safe Accelerator OS control plane:
+
+```bash
+python scripts/accelerator_os.py validate
+python scripts/accelerator_os.py init-program --program-id synthetic-pilot --name "Synthetic Pilot" --output ./tmp/synthetic-pilot
 ```
 
 Start a memo:

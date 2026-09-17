@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://frankx.ai/schemas/accelerator/task-envelope.v1.json",
+  "title": "Accelerator task envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "institutionId", "programId", "workflow", "stage", "agentId", "profileId", "objective", "doneCondition", "autonomyCeiling", "allowedTools", "writeScopes", "evidenceRequired", "status", "createdAt"],
+  "properties": {
+    "schema": {"const": "frankx.accelerator.task-envelope.v1"},
+    "id": {"type": "string", "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{2,127}$"},
+    "institutionId": {"type": "string", "minLength": 3},
+    "programId": {"type": "string", "minLength": 3},
+    "companyId": {"type": ["string", "null"]},
+    "workflow": {"type": "string", "minLength": 3},
+    "stage": {"type": "string", "minLength": 2},
+    "agentId": {"type": "string", "minLength": 3},
+    "profileId": {"type": "string", "minLength": 3},
+    "objective": {"type": "string", "minLength": 10},
+    "doneCondition": {"type": "string", "minLength": 10},
+    "autonomyCeiling": {"enum": ["A0", "A1", "A2", "A3"]},
+    "allowedTools": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "writeScopes": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "inputRefs": {"type": "array", "items": {"type": "string"}},
+    "evidenceRequired": {"type": "array", "items": {"type": "string"}},
+    "requiredVerifierProfile": {"type": ["string", "null"]},
+    "approvalGateIds": {"type": "array", "items": {"type": "string"}},
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxMinutes": {"type": "integer", "minimum": 1, "maximum": 1440},
+        "maxModelCost": {"type": "number", "minimum": 0},
+        "currency": {"type": "string", "default": "EUR"}
+      }
+    },
+    "status": {"enum": ["queued", "claimed", "blocked", "verification", "approval", "completed", "failed", "cancelled"]},
+    "createdAt": {"type": "string", "format": "date-time"},
+    "deadline": {"type": ["string", "null"], "format": "date-time"},
+    "resultRefs": {"type": "array", "items": {"type": "string"}}
+  }
+}

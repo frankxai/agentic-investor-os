@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://frankx.ai/schemas/accelerator/tenant-manifest.v1.json",
+  "title": "Accelerator tenant manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "institutionId", "programId", "companyId", "status", "dataClasses", "memoryNamespace", "artifactRoot", "allowedProfiles", "retentionPolicy", "createdAt"],
+  "properties": {
+    "schema": {"const": "frankx.accelerator.tenant-manifest.v1"},
+    "institutionId": {"type": "string", "minLength": 3},
+    "programId": {"type": "string", "minLength": 3},
+    "companyId": {"type": "string", "minLength": 3},
+    "status": {"enum": ["provisioning", "active", "paused", "graduated", "archived"]},
+    "dataClasses": {"type": "array", "items": {"enum": ["public", "program-private", "company-private", "restricted"]}, "uniqueItems": true},
+    "memoryNamespace": {"type": "string", "minLength": 3},
+    "artifactRoot": {"type": "string", "minLength": 3},
+    "allowedProfiles": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "allowedTools": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "retentionPolicy": {"type": "string", "minLength": 5},
+    "consentRefs": {"type": "array", "items": {"type": "string"}},
+    "createdAt": {"type": "string", "format": "date-time"},
+    "activatedByReceipt": {"type": ["string", "null"]}
+  }
+}

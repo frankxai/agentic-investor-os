@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://frankx.ai/schemas/accelerator/evidence-record.v1.json",
+  "title": "Accelerator evidence record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "institutionId", "programId", "claim", "state", "source", "observedAt", "createdBy", "confidence", "limitations", "createdAt"],
+  "properties": {
+    "schema": {"const": "frankx.accelerator.evidence-record.v1"},
+    "id": {"type": "string", "minLength": 3},
+    "institutionId": {"type": "string", "minLength": 3},
+    "programId": {"type": "string", "minLength": 3},
+    "companyId": {"type": "string", "minLength": 3},
+    "claim": {"type": "string", "minLength": 5},
+    "state": {"enum": ["observed", "sourced", "founder_asserted", "inferred", "contradicted", "stale", "unknown"]},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "locator", "title"],
+      "properties": {
+        "type": {"enum": ["primary-public", "secondary-public", "founder-supplied", "authorized-private", "experiment", "unknown"]},
+        "locator": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "excerpt": {"type": ["string", "null"]},
+        "contentHash": {"type": ["string", "null"]}
+      }
+    },
+    "observedAt": {"type": "string", "format": "date-time"},
+    "createdBy": {"type": "string", "minLength": 3},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "contradicts": {"type": "array", "items": {"type": "string"}},
+    "dataClass": {"enum": ["public", "program-private", "company-private", "restricted"]},
+    "shareScope": {"enum": ["company", "program", "anonymization-candidate", "public"]},
+    "createdAt": {"type": "string", "format": "date-time"}
+  }
+}

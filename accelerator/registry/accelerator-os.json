@@ -1,0 +1,120 @@
+{
+  "schema": "frankx.accelerator-os.v1",
+  "id": "accelerator-os",
+  "version": "0.1.0",
+  "status": "public-reference",
+  "purpose": "Run governed accelerator, venture-studio, and portfolio-support workflows with evidence-backed agent swarms and named human gates.",
+  "principles": [
+    "profiles-are-security-boundaries",
+    "agents-are-event-activated-roles",
+    "skills-are-versioned-procedures",
+    "workflows-are-state-machines",
+    "kanban-is-the-durable-queue",
+    "sis-is-the-private-memory-layer",
+    "maker-never-verifies-own-consequential-output",
+    "capital-and-regulated-decisions-are-human-only"
+  ],
+  "autonomy": {
+    "A0": "observe permitted state",
+    "A1": "analyze and identify evidence needs",
+    "A2": "draft internal artifacts",
+    "A3": "execute bounded reversible internal actions",
+    "A4": "requires a scoped named-human approval receipt",
+    "A5": "prohibited from autonomous execution"
+  },
+  "profiles": [
+    {
+      "id": "program-director",
+      "purpose": "Route workflows, allocate internal capacity, maintain durable queues, and synthesize program state.",
+      "maxAutonomy": "A3",
+      "toolsets": ["kanban", "todo", "delegation", "file", "skills", "memory", "session_search", "cronjob"],
+      "writeScopes": ["program", "tasks", "internal-reports"],
+      "blocked": ["external-send", "capital", "legal-decision", "accept-reject", "cross-tenant-read", "production-merge"]
+    },
+    {
+      "id": "evidence-lab",
+      "purpose": "Collect public or explicitly authorized evidence and produce source-backed diligence artifacts.",
+      "maxAutonomy": "A2",
+      "toolsets": ["web", "browser", "x_search", "vision", "code_execution", "file", "skills", "memory"],
+      "writeScopes": ["evidence-room", "diligence-drafts"],
+      "blocked": ["outreach", "private-source-without-consent", "cross-tenant-read", "decision", "public-communication"]
+    },
+    {
+      "id": "venture-builder",
+      "purpose": "Execute bounded product, engineering, and GTM work inside one accepted company's private repo.",
+      "maxAutonomy": "A3",
+      "toolsets": ["terminal", "file", "code_execution", "browser", "vision", "skills", "delegation"],
+      "writeScopes": ["assigned-company-repo", "assigned-company-task-queue"],
+      "blocked": ["merge", "production-deploy", "spend", "external-send", "other-company-data", "secret-output"]
+    },
+    {
+      "id": "portfolio-operator",
+      "purpose": "Compile company health, route support, attribute costs, and surface program learning.",
+      "maxAutonomy": "A3",
+      "toolsets": ["kanban", "todo", "file", "skills", "memory", "web", "code_execution", "cronjob"],
+      "writeScopes": ["company-scorecards", "support-queue", "program-learning-candidates"],
+      "blocked": ["raw-cross-company-sharing", "external-send", "allocation-decision", "capital", "public-claim"]
+    },
+    {
+      "id": "independent-verifier",
+      "purpose": "Check evidence, tests, claims, permissions, and workflow gates using a model/provider different from the maker.",
+      "maxAutonomy": "A2",
+      "toolsets": ["web", "browser", "file", "terminal", "code_execution", "vision", "skills"],
+      "writeScopes": ["verdicts"],
+      "blocked": ["modify-maker-artifact", "approve-own-verdict", "cross-tenant-read", "external-send", "capital"]
+    }
+  ],
+  "agents": [
+    {"id":"program-director","profile":"program-director","swarm":"control","skills":["accelerator-director"],"input":["program-state","task-events"],"output":["routing-plan","task-envelopes","program-brief"],"maxAutonomy":"A3","humanGates":["capacity-spend","external-send","program-policy-change"]},
+    {"id":"intake-analyst","profile":"evidence-lab","swarm":"selection","skills":["program-intake"],"input":["consented-application"],"output":["normalized-intake","missing-information-list"],"maxAutonomy":"A2","humanGates":["sensitive-data-access"]},
+    {"id":"thesis-fit-analyst","profile":"evidence-lab","swarm":"selection","skills":["thesis-fit"],"input":["normalized-intake","program-thesis"],"output":["fit-matrix","disqualifiers","open-questions"],"maxAutonomy":"A2","humanGates":[]},
+    {"id":"market-researcher","profile":"evidence-lab","swarm":"selection","skills":["diligence-evidence"],"input":["market-questions"],"output":["market-evidence-records"],"maxAutonomy":"A2","humanGates":["paid-data"]},
+    {"id":"product-analyst","profile":"evidence-lab","swarm":"selection","skills":["diligence-evidence"],"input":["product-materials","authorized-demo"],"output":["product-observations","adoption-risks"],"maxAutonomy":"A2","humanGates":["private-product-access"]},
+    {"id":"technical-analyst","profile":"evidence-lab","swarm":"selection","skills":["diligence-evidence"],"input":["authorized-technical-materials"],"output":["technical-observations","risk-questions"],"maxAutonomy":"A2","humanGates":["repo-access","security-testing"]},
+    {"id":"diligence-lead","profile":"program-director","swarm":"selection","skills":["diligence-evidence"],"input":["question-graph","evidence-records"],"output":["coverage-report","unresolved-risks","ic-readiness"],"maxAutonomy":"A2","humanGates":["expert-review"]},
+    {"id":"memo-editor","profile":"program-director","swarm":"selection","skills":["diligence-evidence"],"input":["verified-evidence","coverage-report"],"output":["ic-packet-draft"],"maxAutonomy":"A2","humanGates":["ic-packet-release"]},
+    {"id":"governance-sentinel","profile":"independent-verifier","swarm":"assurance","skills":["governance-sentinel"],"input":["artifact","tenant-scope","gate-policy"],"output":["block-or-pass-verdict","required-approvals"],"maxAutonomy":"A2","humanGates":["legal","compliance","privacy-exception"]},
+    {"id":"independent-verifier","profile":"independent-verifier","swarm":"assurance","skills":["independent-verification"],"input":["maker-artifact","evidence-records","acceptance-criteria"],"output":["verifier-verdict"],"maxAutonomy":"A2","humanGates":["override-failed-verdict"]},
+    {"id":"onboarding-operator","profile":"program-director","swarm":"company-launch","skills":["startup-os-provisioning"],"input":["acceptance-receipt","tenant-manifest"],"output":["onboarding-checklist","workspace-request"],"maxAutonomy":"A2","humanGates":["invite","permissions","data-import"]},
+    {"id":"startup-os-architect","profile":"venture-builder","swarm":"company-launch","skills":["startup-os-provisioning"],"input":["company-goals","authorized-context"],"output":["company-os-manifest","30-day-backlog"],"maxAutonomy":"A3","humanGates":["architecture-commitment","new-paid-tool"]},
+    {"id":"product-builder","profile":"venture-builder","swarm":"company-launch","skills":["venture-sprint"],"input":["approved-task-envelope","company-repo"],"output":["draft-pr","tests","handoff"],"maxAutonomy":"A3","humanGates":["merge","deploy","migration"]},
+    {"id":"gtm-operator","profile":"venture-builder","swarm":"company-launch","skills":["venture-sprint"],"input":["approved-hypothesis","customer-context"],"output":["experiment-plan","draft-assets","learning-record"],"maxAutonomy":"A2","humanGates":["outreach","publication","ad-spend"]},
+    {"id":"portfolio-health-analyst","profile":"portfolio-operator","swarm":"portfolio-compounding","skills":["portfolio-review"],"input":["company-scorecard-inputs"],"output":["health-brief","risk-deltas","evidence-gaps"],"maxAutonomy":"A2","humanGates":[]},
+    {"id":"support-router","profile":"portfolio-operator","swarm":"portfolio-compounding","skills":["portfolio-review"],"input":["verified-blockers","support-catalog"],"output":["support-recommendations","task-envelopes"],"maxAutonomy":"A3","humanGates":["external-introduction","contractor-spend"]},
+    {"id":"finops-analyst","profile":"portfolio-operator","swarm":"portfolio-compounding","skills":["portfolio-review"],"input":["attributed-usage-records"],"output":["company-cost-report","budget-alerts"],"maxAutonomy":"A2","humanGates":["budget-change","billing"]}
+  ],
+  "swarms": [
+    {"id":"selection","trigger":"application.consented","lead":"diligence-lead","agents":["intake-analyst","thesis-fit-analyst","market-researcher","product-analyst","technical-analyst","diligence-lead","memo-editor"],"assurance":["governance-sentinel","independent-verifier"],"done":"verified IC-ready packet or documented stop recommendation"},
+    {"id":"company-launch","trigger":"company.accepted.with_receipt","lead":"startup-os-architect","agents":["onboarding-operator","startup-os-architect","product-builder","gtm-operator"],"assurance":["governance-sentinel","independent-verifier"],"done":"private Day-0 Company OS and approved 30-day backlog"},
+    {"id":"portfolio-compounding","trigger":"portfolio.review_due","lead":"portfolio-health-analyst","agents":["portfolio-health-analyst","support-router","finops-analyst"],"assurance":["governance-sentinel"],"done":"scorecards, support queue, risks, and cost report"},
+    {"id":"assurance","trigger":"gate.requested_or_risk.high","lead":"governance-sentinel","agents":["governance-sentinel","independent-verifier"],"assurance":[],"done":"pass, block, or named-human escalation with evidence"}
+  ],
+  "workflowStates": ["applied","consented","normalized","screened","diligence","ic_ready","accepted","rejected","hold","onboarding","active","graduated","archived"],
+  "gatedStates": ["accepted","rejected","hold","onboarding","active","graduated","archived"],
+  "workflows": [
+    {"id":"application-to-ic","starts":"applied","ends":"ic_ready","stages":["consented","normalized","screened","diligence","ic_ready"],"humanGate":"none before IC release; sensitive access gates still apply","requiredArtifacts":["normalized-intake","fit-matrix","question-graph","evidence-records","risk-register","verifier-verdict","ic-packet-draft"]},
+    {"id":"ic-decision","starts":"ic_ready","ends":"accepted|rejected|hold","stages":["named-human-review","decision-receipt"],"humanGate":"acceptance or rejection is human-only","requiredArtifacts":["ic-packet","governance-verdict","approval-receipt"]},
+    {"id":"accepted-to-day0","starts":"accepted","ends":"active","stages":["onboarding","tenant-provisioning","company-os","30-day-backlog","active"],"humanGate":"permissions, invites, imports, paid tools, and activation","requiredArtifacts":["tenant-manifest","onboarding-checklist","company-os-manifest","backlog","activation-receipt"]},
+    {"id":"weekly-company-loop","starts":"active","ends":"active","stages":["capture","score","route","execute","verify","learn"],"humanGate":"external actions, production, spend","requiredArtifacts":["weekly-scorecard","support-tasks","draft-artifacts","verifier-verdict","learning-record"]},
+    {"id":"monthly-portfolio-review","starts":"active","ends":"active","stages":["aggregate","anonymize","compare","support-plan","cost-review"],"humanGate":"benchmark publication and resource allocation","requiredArtifacts":["company-health-briefs","anonymization-receipts","portfolio-brief","cost-report"]},
+    {"id":"incident-and-escalation","starts":"any","ends":"paused|resumed","stages":["pause","contain","record","verify","human-review","resume"],"humanGate":"resume after high or critical risk","requiredArtifacts":["incident-record","scope-report","verifier-verdict","resume-receipt"]}
+  ],
+  "tenancy": {
+    "requiredKeys": ["institutionId","programId"],
+    "companyScopedKey": "companyId",
+    "isolationRule": "one agent run receives exactly one tenant scope",
+    "sharedDataRule": "shared benchmarks accept approved anonymized aggregates only",
+    "publicRepoRule": "templates and synthetic examples only"
+  },
+  "humanOnly": [
+    "accept-or-reject-company",
+    "investment-or-capital-allocation",
+    "legal-tax-accounting-securities-or-compliance-conclusion",
+    "contract-signature",
+    "external-outreach-or-publication",
+    "permissions-or-sensitive-data-access",
+    "spend-or-billing-change",
+    "merge-deploy-migration-or-destructive-operation",
+    "cross-tenant-exception"
+  ]
+}

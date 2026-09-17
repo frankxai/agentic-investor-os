@@ -1,0 +1,21 @@
+{
+  "schema": "frankx.accelerator.approval-receipt.v1",
+  "id": "approval-synthetic-ic-001",
+  "institutionId": "institution-synthetic",
+  "programId": "pilot-public-safe",
+  "companyId": "company-synthetic-studio",
+  "gateId": "ic-decision",
+  "decision": "approved",
+  "scope": "Synthetic fixture authorizing the accepted state in an automated state-machine test only.",
+  "issuedBy": {
+    "type": "human",
+    "name": "Synthetic Test Operator",
+    "role": "fixture-only program owner",
+    "identityRef": "fixture://not-a-real-approval"
+  },
+  "issuedAt": "2026-01-01T00:00:00Z",
+  "expiresAt": "2099-01-01T00:00:00Z",
+  "artifactRefs": ["fixture://ic-packet/synthetic-v1"],
+  "conditions": ["Synthetic test data only", "Not valid for any real program or company"],
+  "signatureRef": null
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "frankx.accelerator.synthetic-application.v1",
+  "institutionId": "institution-synthetic",
+  "programId": "pilot-public-safe",
+  "applicationId": "app-synthetic-001",
+  "companyId": "company-synthetic-studio",
+  "companyName": "Synthetic Studio",
+  "consentRef": "consent://synthetic/demo-only",
+  "dataClass": "public",
+  "stage": "pre-seed",
+  "summary": "A fictional team testing an evidence-backed workspace for independent educational creators.",
+  "customer": "Independent educational creators managing research, production, and distribution across fragmented tools.",
+  "problemAssertion": "The fictional applicants assert that creators lose time reconciling research, production state, and channel feedback.",
+  "tractionAssertion": "No verified traction; synthetic demo record.",
+  "requestedSupport": ["customer-discovery design", "Day-0 Company OS", "cost attribution"],
+  "missingInformation": ["primary customer interviews", "retention evidence", "willingness-to-pay evidence", "technical prototype"]
+}

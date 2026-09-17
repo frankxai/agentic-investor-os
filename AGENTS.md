@@ -25,6 +25,17 @@ This repo is the Investor OS module for the Agentic Operating System Standard.
 | Portfolio Support Lead | Designs post-decision support cadence. | 30-day support plan. |
 | Compliance Sentinel | Blocks regulated claims and routes expert review. | Risk and approval gate note. |
 
+## Accelerator Runtime Rules
+
+- `accelerator/registry/accelerator-os.json` is the machine-readable runtime contract.
+- Profiles are permission/model boundaries; specialists are event-activated agents, not new profiles.
+- Every run has one institution/program/company tenant scope and a task envelope.
+- Kanban/task state is durable; chat is not the queue.
+- Consequential maker output requires a different-provider Independent Verifier.
+- Governance Sentinel may block but may not grant regulated approval.
+- Gated state transitions require a scoped, unexpired named-human receipt.
+- Runtime company/application data belongs in private instances, never this public starter.
+
 ## Handoff
 
 Report:

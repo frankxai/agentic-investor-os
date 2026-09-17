@@ -1,0 +1,29 @@
+{
+  "schema": "frankx.accelerator.pilot-program.v1",
+  "institutionId": "institution-synthetic",
+  "programId": "pilot-public-safe",
+  "name": "Public-Safe Accelerator OS Pilot",
+  "dataPolicy": "Synthetic records only. No real founder, company, fund, customer, or deal data.",
+  "thesis": {
+    "focus": ["agentic software", "creator infrastructure", "evidence-driven venture operations"],
+    "stage": ["pre-seed", "seed"],
+    "criteria": ["clear buyer problem", "founder learning velocity", "bounded 30-day proof", "responsible data practice"],
+    "exclusions": ["missing consent", "unlawful activity", "outcome promises", "unbounded sensitive-data dependence"]
+  },
+  "pilotScope": {
+    "applications": 5,
+    "diligenceSprints": 2,
+    "day0CompanyOsInstalls": 1,
+    "capitalDeployment": false
+  },
+  "metrics": [
+    "application-to-ic-ready-cycle-time",
+    "evidence-coverage",
+    "human-override-rate",
+    "seven-day-founder-activation",
+    "support-task-completion",
+    "model-and-tool-cost-per-company",
+    "verifier-failure-rate",
+    "tenant-gate-incidents"
+  ]
+}

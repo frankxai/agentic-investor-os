@@ -27,6 +27,22 @@ REQUIRED_PATHS = [
     "templates/diligence-sprint-plan.md",
     "templates/investor-update.md",
     "examples/sample-opportunity-intake.json",
+    "accelerator/README.md",
+    "accelerator/RUNBOOK.md",
+    "accelerator/registry/accelerator-os.json",
+    "accelerator/schemas/task-envelope.schema.json",
+    "accelerator/schemas/evidence-record.schema.json",
+    "accelerator/schemas/approval-receipt.schema.json",
+    "accelerator/schemas/tenant-manifest.schema.json",
+    "accelerator/schemas/verifier-verdict.schema.json",
+    "accelerator/examples/synthetic-pilot-program.json",
+    "accelerator/examples/synthetic-application.json",
+    "accelerator/examples/synthetic-approval-receipt.json",
+    "accelerator/examples/synthetic-verifier-verdict.json",
+    "scripts/accelerator_os.py",
+    "scripts/__init__.py",
+    "tests/test_accelerator_os.py",
+    "tests/__init__.py",
 ]
 
 FORBIDDEN_PATTERNS = [

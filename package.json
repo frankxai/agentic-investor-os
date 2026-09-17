@@ -1,10 +1,13 @@
 {
   "name": "agentic-investor-os",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "description": "Agentic operating system starter for thesis, deal flow, diligence, memos, risk registers, portfolio support, and investor communications.",
   "scripts": {
-    "validate": "python scripts/validate_repo.py ."
+    "validate": "python scripts/validate_repo.py . && python scripts/accelerator_os.py validate && python -m unittest discover -s tests -v",
+    "validate:accelerator": "python scripts/accelerator_os.py validate",
+    "test:accelerator": "python -m unittest discover -s tests -v",
+    "accelerator": "python scripts/accelerator_os.py"
   },
   "keywords": [
     "agentic-os",

@@ -1,0 +1,24 @@
+{
+  "schema": "frankx.accelerator.verifier-verdict.v1",
+  "id": "verdict-synthetic-ic-001",
+  "institutionId": "institution-synthetic",
+  "programId": "pilot-public-safe",
+  "companyId": "company-synthetic-studio",
+  "artifactRef": "fixture://ic-packet/synthetic-v1",
+  "maker": {
+    "agentId": "memo-editor",
+    "provider": "synthetic-maker-provider",
+    "model": "fixture-model-a"
+  },
+  "verifier": {
+    "agentId": "independent-verifier",
+    "profileId": "independent-verifier",
+    "provider": "synthetic-verifier-provider",
+    "model": "fixture-model-b"
+  },
+  "verdict": "pass",
+  "checks": ["source coverage", "tenant scope", "claims", "governance gates"],
+  "findings": [],
+  "residualRisk": "Synthetic fixture only; not a real diligence verdict.",
+  "checkedAt": "2026-01-01T00:00:00Z"
+}

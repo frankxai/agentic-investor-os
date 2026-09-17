@@ -1,7 +1,7 @@
 {
   "id": "investor-os",
   "name": "Agentic Investor OS",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "public-starter",
   "standard": "https://github.com/frankxai/agentic-operating-system-standard",
   "purpose": "Organize thesis, deal flow, diligence, memos, portfolio support, and investor communications with agentic workflows and approval gates.",
@@ -15,7 +15,16 @@
     "technical-analyst",
     "memo-editor",
     "portfolio-support-lead",
-    "compliance-sentinel"
+    "compliance-sentinel",
+    "program-director",
+    "intake-analyst",
+    "thesis-fit-analyst",
+    "governance-sentinel",
+    "independent-verifier",
+    "startup-os-architect",
+    "portfolio-health-analyst",
+    "support-router",
+    "finops-analyst"
   ],
   "workflows": [
     "thesis-to-memo",
@@ -23,7 +32,11 @@
     "diligence-sprint",
     "portfolio-support",
     "investor-update",
-    "readme-quality-review"
+    "readme-quality-review",
+    "accelerator-application-to-ic",
+    "accelerator-accepted-to-day0",
+    "accelerator-weekly-company-loop",
+    "accelerator-monthly-portfolio-review"
   ],
   "loops": [
     "thesis-loop",
@@ -46,6 +59,9 @@
     "docs/SAMPLE_DILIGENCE_MEMO.md",
     "docs/INVESTOR_OS_PLAYBOOK.md",
     "templates/diligence-sprint-plan.md",
-    "templates/investor-update.md"
+    "templates/investor-update.md",
+    "accelerator/registry/accelerator-os.json",
+    "accelerator/examples/synthetic-pilot-program.json",
+    "accelerator/examples/synthetic-application.json"
   ]
 }
